@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SolarSync_API</name>
+    </assembly>
+    <members>
+        <member name="T:SolarSync_API.Controllers.CompaniesController">
+            <summary>
+            Controlador para gerenciar cadastro de Empresas no sistema.
+            Este controlador fornece endpoints para criar, ler, atualizar e deletar cadastros de empresas.
+            </summary>
+        </member>
+        <member name="M:SolarSync_API.Controllers.CompaniesController.#ctor(SolarSync_API.Services.CompanyService)">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:SolarSync_API.Controllers.CompaniesController"/>.
+            </summary>
+            <param name="companyService">O serviço responsável pelas operações da empresa.</param>
+        </member>
+        <member name="M:SolarSync_API.Controllers.CompaniesController.GetCampaigns">
+            <summary>
+            Obtém uma lista de todas as Empresas.
+            </summary>
+            <returns>Uma lista de empresas.</returns>
+        </member>
+        <member name="M:SolarSync_API.Controllers.CompaniesController.GetCampaignById(System.String)">
+            <summary>
+            Obtém uma empresa específica pelo seu ID.
+            </summary>
+            <param name="id">O ID da empresa a ser obtida.</param>
+            <returns>A empresa correspondente ao ID fornecido, ou um status 404 se não for encontrada.</returns>
+        </member>
+        <member name="M:SolarSync_API.Controllers.CompaniesController.GetCampaignByCNPJ(System.String)">
+            <summary>
+            Obtém uma empresa específica pelo seu CNPJ.
+            </summary>
+            <param name="cnpj">O CNPJ da empresa a ser obtida.</param>
+            <returns>A empresa correspondente ao CNPJ fornecido, ou um status 404 se não for encontrada.</returns>
+        </member>
+        <member name="M:SolarSync_API.Controllers.CompaniesController.PutCompany(System.String,SolarSync_API.DTO.UpdateCompanyDTO)">
+            <summary>
+            Atualiza uma empresa existente.
+            </summary>
+            <param name="id">O ID da empresa a ser atualizada.</param>
+            <param name="companyDto">O objeto contendo os dados atualizados da empresa.</param>
+            <returns>Um status 200 se a atualização for bem-sucedida, um status 404 se a empresa não for encontrada, ou um status 400/409 em caso de erro.</returns>
+        </member>
+        <member name="M:SolarSync_API.Controllers.CompaniesController.PostCampaign(SolarSync_API.Models.BaseCompany)">
+            <summary>
+            Cria uma nova empresa.
+            </summary>
+            <param name="companyDto">Os dados da nova empresa a ser criada.</param>
+            <returns>Um status 201 se a empresa for criada com sucesso, ou um status 400/409 em caso de erro.</returns>
+        </member>
+        <member name="M:SolarSync_API.Controllers.CompaniesController.DeleteCompany(System.String)">
+            <summary>
+            Deleta uma empresa específica pelo seu ID.
+            </summary>
+            <param name="id">O ID da empresa a ser deletada.</param>
+            <returns>Um status 200 se a empresa for deletada com sucesso, ou um status 404 se a empresa não for encontrada.</returns>
+        </member>
+        <member name="T:SolarSync_API.Controllers.CompanyReportController">
+            <summary>
+            Controlador responsável pelo gerenciamento de relatórios da empresa.
+            Oferece endpoints para criar, atualizar, buscar e deletar relatórios da empresa.
+            </summary>
+        </member>
+        <member name="M:SolarSync_API.Controllers.CompanyReportController.#ctor(SolarSync_API.Interface.ICompanyReportService)">
+            <summary>
+            Inicializa uma nova instância de <see cref="T:SolarSync_API.Controllers.CompanyReportController"/>.
+            </summary>
+            <param name="companyReportService">Serviço de gerenciamento de relatórios das empresas.</param>
+        </member>
+        <member name="M:SolarSync_API.Controllers.CompanyReportController.Create(System.Collections.Generic.List{SolarSync_API.DTO.CompanyReportDTO})">
+            <summary>
+            Cria novos relatórios de empresas em massa.
+            </summary>
+            <param name="companyReportDtos">Lista de dados dos relatórios de empresas a serem criados.</param>
+            <returns>Confirmação da criação dos relatórios de empresas.</returns>
+            <response code="201">Relatórios de empresa criados com sucesso.</response>
+            <response code="400">Dados inválidos para criação dos relatórios.</response>
+        </member>
+        <member name="M:SolarSync_API.Controllers.CompanyReportController.GetAll">
+            <summary>
+            Busca todos os relatórios de empresas.
+            </summary>
+            <returns>Lista de relatórios de empresas existentes.</returns>
+            <response code="200">Retorna a lista de relatórios de empresas.</response>
+        </member>
+        <member name="M:SolarSync_API.Controllers.CompanyReportController.GetById(System.String)">
+            <summary>
+            Busca um relatório de empresas específico pelo ID.
+            </summary>
+            <param name="id">ID do relatório de empresa.</param>
+            <returns>O relatório de empresas correspondente ao ID.</returns>
+            <response code="200">Retorna o relatório de empresas com o ID especificado.</response>
+            <response code="404">Relatório de empresas não encontrado para o ID especificado.</response>
+        </member>
+        <member name="M:SolarSync_API.Controllers.CompanyReportController.Update(System.String,SolarSync_API.DTO.UpdateCompanyReportDTO)">
+            <summary>
+            Atualiza um relatório de empresa existente.
+            </summary>
+            <param name="id">ID do relatório de empresa a ser atualizado.</param>
+            <param name="companyReportDto">Dados atualizados do relatório de empresa.</param>
+            <returns>Status da operação de atualização.</returns>
+            <response code="204">Relatório de empresa atualizado com sucesso.</response>
+            <response code="404">Relatório de empresa não encontrado para o ID especificado.</response>
+        </member>
+        <member name="M:SolarSync_API.Controllers.CompanyReportController.Delete(System.String)">
+            <summary>
+            Exclui um relatório de empresa pelo ID.
+            </summary>
+            <param name="id">ID do relatório de empresa a ser excluído.</param>
+            <returns>Status da operação de exclusão.</returns>
+            <response code="204">Relatório de empresa excluído com sucesso.</response>
+            <response code="404">Relatório de empresa não encontrado para o ID especificado.</response>
+        </member>
+        <member name="P:SolarSync_API.DTO.CompanyReportDTO.CompanyId">
+            <summary>
+            Identificador da Empresa relacionada ao relatório (Chave Estrangeira).
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.DTO.UpdateCompanyDTO.Name">
+            <summary>
+            Propriedades opcionais para atualização.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.DTO.UpdateCompanyReportDTO.CompanyId">
+            <summary>
+            Propriedades opcionais para atualização.
+            </summary>
+        </member>
+        <member name="T:SolarSync_API.Models.BaseCompany">
+            <summary>
+            Classe base para propriedades comuns de empresas.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.BaseCompany.Name">
+            <summary>
+            Nome da Empresa.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.BaseCompany.Description">
+            <summary>
+            Descrição detalhada da Empresa.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.BaseCompany.CNPJ">
+            <summary>
+            CNPJ da Empresa.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.BaseCompany.Email">
+            <summary>
+            Email da Empresa. Deve conter o endereçio de email "ex: @xxx.xxx"
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.BaseCompany.Status">
+            <summary>
+            Status atual da Empresa.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.BaseCompanyReport.Solution">
+            <summary>
+            Soluções propostas pela empresa.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.BaseCompanyReport.CovaregeArea">
+            <summary>
+            Soluções propostas pela empresa.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.Company.Id">
+            <summary>
+            Identificador único da empresa.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.Company.RegistrationDate">
+            <summary>
+            Data e hora de registro da empresa.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.CompanyReport.Id">
+            <summary>
+            Identificador único do relatório.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.CompanyReport.CompanyId">
+            <summary>
+            Identificador da Empresa relacionada ao relatório (Chave Estrangeira).
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.CompanyReport.CreationDate">
+            <summary>
+            Data de criação do relatório.
+            </summary>
+        </member>
+        <member name="M:SolarSync_API.Services.ValidationService.IsValidEmail(System.String)">
+            <summary>
+            Valida se o e-mail contém o símbolo "@" e tem um formato mínimo válido.
+            </summary>
+        </member>
+        <member name="M:SolarSync_API.Services.ValidationService.IsValidCNPJ(System.String)">
+            <summary>
+            Verifica se o CNPJ possui exatamente 14 dígitos numéricos.
+            </summary>
+        </member>
+        <member name="M:SolarSync_API.Services.ValidationService.IsEmailValidAsync(System.String)">
+            <summary>
+            Valida o e-mail utilizando a API externa do Bouncer.
+            </summary>
+        </member>
+    </members>
+</doc>
