@@ -52,6 +52,15 @@ namespace SolarSync_API.Services
             if (!string.IsNullOrEmpty(companyDto.Name)) company.Name = companyDto.Name;
             if (!string.IsNullOrEmpty(companyDto.Description)) company.Description = companyDto.Description;
             if (!string.IsNullOrEmpty(companyDto.CNPJ)) company.CNPJ = companyDto.CNPJ;
+            if (companyDto.Solutions != null)
+            {
+                company.Solutions = companyDto.Solutions.Select(solutionDto => new Solution
+                {
+                    Type = solutionDto.Type,
+                    Description = solutionDto.Description,
+                    CoverageArea = solutionDto.CoverageArea
+                }).ToList();
+            }
             if (!string.IsNullOrEmpty(companyDto.Email)) company.Email = companyDto.Email;
             if (!string.IsNullOrEmpty(companyDto.Status)) company.Status = companyDto.Status;
 
@@ -91,6 +100,7 @@ namespace SolarSync_API.Services
                 Name = companyDto.Name,
                 Description = companyDto.Description,
                 CNPJ = companyDto.CNPJ,
+                Solutions = companyDto.Solutions,
                 Email = companyDto.Email,
                 Status = companyDto.Status
             };

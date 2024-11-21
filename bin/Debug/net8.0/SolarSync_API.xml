@@ -154,6 +154,11 @@
             Email da Empresa. Deve conter o endereçio de email "ex: @xxx.xxx"
             </summary>
         </member>
+        <member name="P:SolarSync_API.Models.BaseCompany.Solutions">
+            <summary>
+            Lista de soluções associadas à empresa.
+            </summary>
+        </member>
         <member name="P:SolarSync_API.Models.BaseCompany.Status">
             <summary>
             Status atual da Empresa.
@@ -192,6 +197,31 @@
         <member name="P:SolarSync_API.Models.CompanyReport.CreationDate">
             <summary>
             Data de criação do relatório.
+            </summary>
+        </member>
+        <member name="T:SolarSync_API.Models.Solution">
+            <summary>
+            Classe que representa uma solução para empresas.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.Solution.Id">
+            <summary>
+            Identificador único da empresa.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.Solution.Type">
+            <summary>
+            Tipo da solução.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.Solution.Description">
+            <summary>
+            Descrição da solução.
+            </summary>
+        </member>
+        <member name="P:SolarSync_API.Models.Solution.CoverageArea">
+            <summary>
+            Área de cobertura da solução.
             </summary>
         </member>
         <member name="M:SolarSync_API.Services.ValidationService.IsValidEmail(System.String)">

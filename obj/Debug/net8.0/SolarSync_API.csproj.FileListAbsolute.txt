@@ -285,3 +285,4 @@ C:\Users\ADM\source\repos\SolarSync_API\obj\Debug\net8.0\refint\SolarSync_API.dl
 C:\Users\ADM\source\repos\SolarSync_API\obj\Debug\net8.0\SolarSync_API.pdb
 C:\Users\ADM\source\repos\SolarSync_API\obj\Debug\net8.0\SolarSync_API.genruntimeconfig.cache
 C:\Users\ADM\source\repos\SolarSync_API\obj\Debug\net8.0\ref\SolarSync_API.dll
+C:\Users\ADM\source\repos\SolarSync_API\obj\Debug\net8.0\SolarSync_API.sourcelink.json

@@ -37,6 +37,12 @@ namespace SolarSync_API.Models
         [Required(ErrorMessage = "O email é obrigatório.")]
         [EmailAddress(ErrorMessage = "O email deve estar em um formato válido.")]
         public String Email { get; set; }
+        
+        /// <summary>
+        /// Lista de soluções associadas à empresa.
+        /// </summary>
+        [BsonElement("solutions")]
+        public List<Solution> Solutions { get; set; } = new List<Solution>();
 
         /// <summary>
         /// Status atual da Empresa.
