@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SolarSync_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12e7905ca52d87ecc95caa92db00caa0c08a39ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff6e905879dab4d2475e0416bfd40c1463df4423")]
 [assembly: System.Reflection.AssemblyProductAttribute("SolarSync_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SolarSync_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

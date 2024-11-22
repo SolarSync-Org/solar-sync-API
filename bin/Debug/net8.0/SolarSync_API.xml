@@ -89,7 +89,7 @@
             Este controlador fornece endpoints para criar, ler, atualizar e deletar cadastros de clientes.
             </summary>
         </member>
-        <member name="M:SolarSync_API.Controllers.ClientsController.#ctor(SolarSync_API.Services.ClientService)">
+        <member name="M:SolarSync_API.Controllers.ClientsController.#ctor(SolarSync_API.Services.IClientService)">
             <summary>
             Inicializa uma nova instância da classe <see cref="T:SolarSync_API.Controllers.ClientsController"/>.
             </summary>

@@ -7,8 +7,8 @@ using SolarSync_API.DTO;
 
 namespace SolarSync_API.Services
 {
-    public class ClientService
-    {
+    public class ClientService : IClientService
+        {
         private readonly IMongoCollection<Client> _clients;
         private readonly ValidationService _validationService;
 

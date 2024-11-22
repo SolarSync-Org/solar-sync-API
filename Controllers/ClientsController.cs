@@ -15,13 +15,13 @@ namespace SolarSync_API.Controllers
     [ApiController]
     public class ClientsController : ControllerBase
     {
-        private readonly ClientService _clientService;
+        private readonly IClientService _clientService;
 
         /// <summary>
         /// Inicializa uma nova instância da classe <see cref="ClientsController"/>.
         /// </summary>
         /// <param name="clientService">O serviço responsável pelas operações de cliente.</param>
-        public ClientsController(ClientService clientService)
+        public ClientsController(IClientService clientService)
         {
             _clientService = clientService;
         }
