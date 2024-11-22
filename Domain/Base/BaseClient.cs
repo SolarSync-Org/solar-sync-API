@@ -33,13 +33,6 @@ namespace SolarSync_API.Models
         public string CPF { get; set; }
 
         /// <summary>
-        /// Renda mensal do Cliente.
-        /// </summary>
-        [BsonElement("rent"), BsonRepresentation(BsonType.String)]
-        [Required(ErrorMessage = "A renda é obrigatória.")]
-        public string Rent { get; set; }
-
-        /// <summary>
         /// Email do Cliente.
         /// </summary>
         [BsonElement("email"), BsonRepresentation(BsonType.String)]

@@ -43,7 +43,9 @@ builder.Services.AddSingleton<MongoDbService>();
 
 // Registro de serviços de negócio
 builder.Services.AddScoped<ICompanyReportService, CompanyReportService>();
+builder.Services.AddScoped<IClientReportService, ClientReportService>();
 builder.Services.AddScoped<CompanyService>();  
+builder.Services.AddScoped<ClientService>();  
 builder.Services.AddHttpClient<ValidationService>();
 builder.Services.AddScoped<ValidationService>();
 
